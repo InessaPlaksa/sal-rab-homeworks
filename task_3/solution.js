@@ -3,14 +3,14 @@ function renderCartItem(item) {
 
     // Задание №3.1. Формирование строки корзины
 
-    product.unshift = ({id: 1, title: "Пицца", count: 5, price: 500.00});// product - объект вида {id: id, title: title, count: count, price: price}
+    product.unshift = ({id: 1, title: "Пицца", count: 5, price: 500.00}, {id: 2, title: "Чебурек", count: 3, price: 120.00});// product - объект вида {id: id, title: title, count: count, price: price}
  // например, {id: 1, title: 'Пицца', count: 5, price: '500.00'}, где
     // id - идентификатор
     // title - наименование
     // price - цена
     // count - количество
 
-    let itemCountText;// сформируйте строку itemCountText вида:
+    let itemCountText = "5 x 500.00 ₽ = 2500 ₽";// сформируйте строку itemCountText вида:
     // количество × цена ₽ = стоимость ₽
     // например,
     // 5 × 500.00 ₽ = 2500 ₽
