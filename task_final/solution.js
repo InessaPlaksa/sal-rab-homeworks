@@ -34,19 +34,22 @@
 // }
 
 function sendRequest(name, phone, address, goods, sum) {
-    let myobject = {
-        data; {
-            client: "",
-            order: {adress: "", sum: 0},
-            goods: []
-        }
-    }
+      let myobject={
+      data: {
+                client: "",  
+                order: {address:"", sum: 0},
+                goods: []
+              }
+    
+            }
     let countOfGoods = goods.length;
-
-    for (let i = 0; i <= countOfGoods; i += 1) {
+    
+    for (let i = 0; i < countOfGoods; i += 1) {
         delete goods[i].id;
-        delete goods[i].price;};
-        myobject.data.goods=goods;
+        delete goods[i].price;        
+    };
+
+   myobject.data.goods=goods;
    myobject.data.order.address = "ул. "+address.street+", дом "+address.house+", "+address.entrance+" подъезд, "+address.floor+" этаж, кв. "+address.flat;
    myobject.data.order.sum = sum;
    myobject.data.client = name+" "+phone;
